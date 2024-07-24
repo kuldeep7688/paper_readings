@@ -121,13 +121,23 @@
 
 1. I am interested in something similar (reducing overall cost of AL)
 
-##
+## FreeAL: Towards Human-Free Active Learning in the Era of Large Language Models
 
-[Semantic Scholar Link]() | [Arxiv Link]()
+[Semantic Scholar Link](https://www.semanticscholar.org/reader/386806bbd9d84e644ded24d4a9c7ea805c273891) | [Arxiv Link]()
 
 ### Main Idea
 
-1.
+1. A collaborative method to combine LLMs and SLMs for active learning and removing human in the loop
+2. LLMs are good source of coarse-grained information and SLMs are effective weak learners (and can distill valuable clean samples from noisy supervision). LLM operates as an active annotator infusinf its knowledge and SLM acts as a student to filter out the high quality input-label pairs to feed back the LLM for subsequent label refinery.
+3. Method
+   1. Active labelling by LLMs
+      1. Initial annotation by Self Generated Demonstration
+      2. Refined annotation in Subsequent Rounds
+   2. Knowledge Distillation by SLMs
+      1. Robust Self training
+         1. Selection based technique + GMMs to find out clean samples, and consistency regularizations and back translation
+      2. Demonstration Pool Filtering
+         1. using a small loss criterion and k-mediods
 
 ### Datasets Used
 
