@@ -141,24 +141,30 @@
 
 ### Datasets Used
 
--
+- 8 NLP datasets
 
 ### Anything I can add upon that
 
-1.
+1. Something similar maybe we can improve their method
 
-##
+## ext Embeddings by Weakly-Supervised Contrastive Pre-training
 
-[Semantic Scholar Link]() | [Arxiv Link]()
+[Semantic Scholar Link](https://www.semanticscholar.org/reader/5a3c1afe73d8bcc8288d17cb17be2baec8a98464) | [Arxiv Link]()
 
 ### Main Idea
 
-1.
+1. created a new dataset of text pairs from training embedding systems
+   1. CC-Pairs : dataset includes (post, comment) pairs from Reddit 3, (question, upvoted answer) pairs from Stackexchange 4, (entity name + section title, passage) pairs from English Wikipedia, (title, abstract) and citation pairs from Scientific papers 36 ], and (title, passage) pairs from Common Crawl 5 web pages and various News sources
+2. By basic length based and reddit score based filtering 1.3 billion text pairs areleft
+3. Consistency-based filtering technique: a model is first trained on the 1.3B noisy ext pairs, and then used to rank each pair against a pool of 1 million random passages. a text pair is kept only if it falls in the top-k ranked lists (k used here is 2)
+4. when trained on noisy datasets, neural networks tend to memorize the clean labels first and then gradually overfit the noisy labels
 
 ### Datasets Used
 
--
+- BIER benchmark
+- SentEval
+- MTEB
 
 ### Anything I can add upon that
 
-1.
+1. I like the consistency based filtering approach can be extended to other self supervised tasks too
